@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+#btn1{
+  width: 300px;
+  font-size: 1rem;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid gray;
+  box-shadow: 3px 3px 2px #003;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+}
+#btn1:active{
+  box-shadow: 0px 0px 0px 0px #ccc;
+  transform: scale(0.99);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.1s;
+}
+  </style>
+</head>
+<body>
+  <button id="btn1">Click me</button>
+  <script>
+
+let btn = document.querySelector("#btn1");
+btn.addEventListener("click",function(){
+
+let a=Math.round(Math.random()*256);
+let b=Math.round(Math.random()*256);
+let c=Math.round(Math.random()*256);
+let d=Math.round(Math.random()*256);
+document.body.style.backgroundColor = `rgba(${a},${b},${c},${d})`;
+
+})
+
+      </script>
+</body>
+</html>
